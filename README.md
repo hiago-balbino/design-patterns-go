@@ -8,4 +8,4 @@ Design patterns are not for a specific programming language, they can be used ty
 
 ## Contents
 
-* [S.O.L.I.D.](./SOLID/README.md)
+* [S.O.L.I.D.](./SOLID)
