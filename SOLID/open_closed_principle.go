@@ -1,4 +1,4 @@
-// open_closed is a file to demonstrate what is the idea behind the Open-Closed Principle including some examples.
+// open_closed_principle is a file to demonstrate what is the idea behind the Open-Closed Principle including some examples.
 // The file simulates a sales Website that needs to filter the products for some attributes.
 package main
 

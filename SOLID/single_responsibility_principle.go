@@ -1,4 +1,4 @@
-// single_responsibility is a file to demonstrate what is the idea behind the Single Responsibility Principle
+// single_responsibility_principle is a file to demonstrate what is the idea behind the Single Responsibility Principle
 // including good and bad examples.
 // The file simulates a Journal that Adds and Prints the entries(news).
 package main
