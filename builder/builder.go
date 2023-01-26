@@ -5,7 +5,7 @@ import "fmt"
 // House is a model to represent the house to be built.
 type House struct {
 	windowsType, doorsType string
-	numFloor               int32
+	numFloors              int32
 }
 
 // String implements a Stringer interface to print the output details.
@@ -14,7 +14,7 @@ func (h House) String() {
 		"this is a house with %s windows type, %s doors type and %d floor(s).\n",
 		h.windowsType,
 		h.doorsType,
-		h.numFloor,
+		h.numFloors,
 	)
 }
 
@@ -24,8 +24,8 @@ type HouseBuilder interface {
 	WithWindowsType(windowsType string) HouseBuilder
 	// WithDoorsType is a function to set the doors type of the house.
 	WithDoorsType(doorsType string) HouseBuilder
-	// WithNumFloor is a function to set the numbers floor of the house.
-	WithNumFloor(numFloor int32) HouseBuilder
+	// WithNumFloors is a function to set the floor numbers of the house.
+	WithNumFloors(numFloors int32) HouseBuilder
 	// Build is a function to build a house given the attributes.
 	Build() House
 }
@@ -33,7 +33,7 @@ type HouseBuilder interface {
 // NormalBuilder is a builder that implements the HouseBuilder interface to create a normal house.
 type NormalBuilder struct {
 	windowsType, doorsType string
-	numFloor               int32
+	numFloors              int32
 }
 
 // NewNormalBuilder is a constructor to create a new instance of NormalBuilder.
@@ -53,9 +53,9 @@ func (n *NormalBuilder) WithDoorsType(doorsType string) HouseBuilder {
 	return n
 }
 
-// WithNumFloor is a function to set the numbers floor of the house.
-func (n *NormalBuilder) WithNumFloor(numFloor int32) HouseBuilder {
-	n.numFloor = numFloor
+// WithNumFloors is a function to set the floor numbers of the house.
+func (n *NormalBuilder) WithNumFloors(numFloors int32) HouseBuilder {
+	n.numFloors = numFloors
 	return n
 }
 
@@ -64,14 +64,14 @@ func (n *NormalBuilder) Build() House {
 	return House{
 		windowsType: n.windowsType,
 		doorsType:   n.doorsType,
-		numFloor:    n.numFloor,
+		numFloors:   n.numFloors,
 	}
 }
 
-// IglooBuilder is a builder that implements the HouseBuilder interface to create a igloo house.
+// IglooBuilder is a builder that implements the HouseBuilder interface to create an igloo house.
 type IglooBuilder struct {
 	windowsType, doorsType string
-	numFloor               int32
+	numFloors              int32
 }
 
 // NewIglooBuilder is a constructor to create a new instance of IglooBuilder.
@@ -91,9 +91,9 @@ func (i *IglooBuilder) WithDoorsType(doorsType string) HouseBuilder {
 	return i
 }
 
-// WithNumFloor is a function to set the numbers floor of the house.
-func (i *IglooBuilder) WithNumFloor(numFloor int32) HouseBuilder {
-	i.numFloor = numFloor
+// WithNumFloors is a function to set the floor numbers of the house.
+func (i *IglooBuilder) WithNumFloors(numFloors int32) HouseBuilder {
+	i.numFloors = numFloors
 	return i
 }
 
@@ -102,7 +102,7 @@ func (i *IglooBuilder) Build() House {
 	return House{
 		windowsType: i.windowsType,
 		doorsType:   i.doorsType,
-		numFloor:    i.numFloor,
+		numFloors:   i.numFloors,
 	}
 }
 
@@ -110,14 +110,14 @@ func main() {
 	normalHouse := NewNormalBuilder().
 		WithWindowsType("Wooden").
 		WithDoorsType("Wooden").
-		WithNumFloor(2).
+		WithNumFloors(2).
 		Build()
 	normalHouse.String()
 
 	iglooHouse := NewIglooBuilder().
 		WithWindowsType("Snow").
 		WithDoorsType("Snow").
-		WithNumFloor(1).
+		WithNumFloors(1).
 		Build()
 	iglooHouse.String()
 }
