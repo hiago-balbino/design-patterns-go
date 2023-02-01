@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Size is a constant for all T-Shirt sizes.
 type Size int
 
 const (
@@ -11,17 +12,20 @@ const (
 	GG
 )
 
+// TShirt is a base model to represent a T-Shirt with basic details.
 type TShirt struct {
 	Color string
 	Size  Size
 }
 
-type tshirtMod func(*TShirt)
+type tshirtAction func(*TShirt)
 
+// TShirtBuilder is a struct that contains a slice of actions to create a T-Shirt.
 type TShirtBuilder struct {
-	actions []tshirtMod
+	actions []tshirtAction
 }
 
+// WithColor is a function to set the T-Shirt color using builder actions.
 func (tsb *TShirtBuilder) WithColor(color string) *TShirtBuilder {
 	tsb.actions = append(tsb.actions, func(ts *TShirt) {
 		ts.Color = color
@@ -29,6 +33,7 @@ func (tsb *TShirtBuilder) WithColor(color string) *TShirtBuilder {
 	return tsb
 }
 
+// WithSize is a function to set the T-Shirt size using builder actions.
 func (tsb *TShirtBuilder) WithSize(size Size) *TShirtBuilder {
 	tsb.actions = append(tsb.actions, func(ts *TShirt) {
 		ts.Size = size
@@ -36,6 +41,7 @@ func (tsb *TShirtBuilder) WithSize(size Size) *TShirtBuilder {
 	return tsb
 }
 
+// Build creates a T-Shirt based on TShirtBuilder actions.
 func (tsb *TShirtBuilder) Build() TShirt {
 	tshirt := TShirt{}
 	for _, action := range tsb.actions {
