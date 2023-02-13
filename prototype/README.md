@@ -10,3 +10,10 @@ A partially or fully initialized object that you copy(clone) and make use of.
 * We make a copy of the prototype and customize it
   * Requires 'deep copy' support
 * We make the cloning convenient(e.g., via a Factory)
+
+## Notes
+
+* To implement a propotype, partially construct an object and store it somewhere
+* Deep copy the prototype
+* Customize the resulting instance
+* A prototype factory provides a convenient API for using prototypes
