@@ -6,6 +6,10 @@ Design patterns are not for a specific programming language, they can be used ty
 
 *Do not hesitate to get in touch about any doubts.*
 
+## Quickly Notes
+
+The idea about the examples is just to demonstrate how we can use the patterns, so some details were ignored, like unexported/exported structures,  each pattern file has a main function, that collides with others, but you can run using the `go run <folder>/<file>.go command and it will works.
+
 ## Contents
 
 * [S.O.L.I.D.](./SOLID)
