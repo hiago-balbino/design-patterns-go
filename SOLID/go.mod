@@ -1,3 +1,3 @@
 module github.com/hiago-balbino/design-patterns-go/SOLID
 
-go 1.19
+go 1.20
