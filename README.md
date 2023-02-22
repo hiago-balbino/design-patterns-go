@@ -16,3 +16,4 @@ The idea about the examples is just to demonstrate how we can use the patterns, 
 * [Builder](./builder)
 * [Factory](./factory)
 * [Prototype](./prototype)
+* [Singleton](./singleton)
