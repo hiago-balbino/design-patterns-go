@@ -18,3 +18,4 @@ The idea about the examples is just to demonstrate how we can use the patterns, 
 * [Prototype](./prototype)
 * [Singleton](./singleton)
 * [Adapter](./adapter)
+* [Bridge](./bridge)
