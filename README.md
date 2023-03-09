@@ -19,3 +19,4 @@ The idea about the examples is just to demonstrate how we can use the patterns, 
 * [Singleton](./singleton)
 * [Adapter](./adapter)
 * [Bridge](./bridge)
+* [Composite](./composite)
