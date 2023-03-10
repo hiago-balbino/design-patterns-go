@@ -1,7 +1,7 @@
 # Design Patterns in Go
 
 This project is aimed at learning and documenting Design Patterns using the Go language.
-The knowledge acquited in this project was obtained from [this course](https://www.udemy.com/course/design-patterns-go).
+The knowledge acquited in this project was obtained from [this course](https://www.udemy.com/course/design-patterns-go) and [this page](https://refactoring.guru/design-patterns/go).
 Design patterns are not for a specific programming language, they can be used typically for all, but in this project the examples were made using Go. 
 
 *Do not hesitate to get in touch about any doubts.*
