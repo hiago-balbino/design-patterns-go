@@ -20,3 +20,4 @@ The idea about the examples is just to demonstrate how we can use the patterns, 
 * [Adapter](./adapter)
 * [Bridge](./bridge)
 * [Composite](./composite)
+* [Decorator](./decorator)
