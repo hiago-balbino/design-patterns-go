@@ -43,7 +43,7 @@ type Database interface {
 func GetSingletonDatabase() Database {
 	once.Do(func() {
 		db := singletonDatabase{}
-		capitals, err := readFileData("capitals.txt")
+		capitals, err := readFileData("singleton/capitals.txt")
 		if err == nil {
 			db.capitals = capitals
 		}
